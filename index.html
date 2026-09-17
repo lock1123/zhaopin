@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招聘页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            color: #333;
+            line-height: 1.6;
+        }
+        /* 导航 */
+        nav {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 24px;
+        }
+        /* banner */
+        .banner {
+            background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+        }
+        .banner h1 {
+            font-size: 42px;
+            margin-bottom: 16px;
+        }
+        .banner p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        /* 通用容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        /* 岗位卡片 */
+        .job-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(340px,1fr));
+            gap: 28px;
+        }
+        .job-card {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: 0 2px 8px #f0f0f0;
+            transition: 0.3s;
+        }
+        .job-card:hover {
+            box-shadow: 0 6px 16px #ddd;
+        }
+        .job-card h3 {
+            color: #2c3e50;
+            margin-bottom:10px;
+        }
+        .job-tag {
+            display: inline-block;
+            background:#e8f4fc;
+            color:#007bff;
+            padding:4px 10px;
+            border-radius:20px;
+            font-size:14px;
+            margin-right:8px;
+            margin-bottom:12px;
+        }
+        .job-desc {
+            color:#666;
+            margin-bottom:16px;
+        }
+        .btn-apply {
+            display: inline-block;
+            background:#007bff;
+            color:white;
+            text-decoration:none;
+            padding:10px 20px;
+            border-radius:6px;
+        }
+        /* 公司介绍 */
+        .about {
+            background:#f8f9fa;
+        }
+        .about-content {
+            max-width:800px;
+            margin:0 auto;
+            text-align:center;
+        }
+        /* 投递表单 */
+        .form-box {
+            max-width:600px;
+            margin:0 auto;
+        }
+        .form-item {
+            margin-bottom:20px;
+        }
+        label {
+            display:block;
+            margin-bottom:8px;
+        }
+        input,textarea {
+            width:100%;
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:6px;
+            font-size:16px;
+        }
+        textarea {
+            height:120px;
+        }
+        button {
+            background:#007bff;
+            color:white;
+            border:none;
+            padding:14px 30px;
+            border-radius:6px;
+            font-size:16px;
+            cursor:pointer;
+        }
+        footer {
+            background:#2c3e50;
+            color:#fff;
+            text-align:center;
+            padding:30px 20px;
+        }
+        /* 移动端适配 */
+        @media(max-width:768px){
+            .nav-links a{
+                margin-left:12px;
+            }
+            .banner h1{
+                font-size:28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <div class="logo">啦啦啦啦公司招聘</div>
+        <div class="nav-links">
+            <a href="#job">招聘岗位</a>
+            <a href="#about">公司介绍</a>
+            <a href="#apply">在线投递</a>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="banner">
+        <h1>加入我们，共创未来</h1>
+        <p>寻找志同道合的伙伴，提供广阔发展平台，优厚薪资福利，期待你的加入！</p>
+    </div>
+
+    <!-- 招聘岗位 -->
+    <section id="job" class="container">
+        <h2 class="section-title">热招岗位</h2>
+        <div class="job-list">
+            <div class="job-card">
+                <h3>前端开发工程师</h3>
+                <span class="job-tag">全职</span>
+                <span class="job-tag">8k‑15k</span>
+                <div class="job-desc">
+                    负责网站、H5页面开发；熟悉HTML/CSS/JS，有Vue优先。
+                </div>
+                <a href="#apply" class="btn-apply">立即投递</a>
+            </div>
+            <div class="job-card">
+                <h3>后端开发工程师</h3>
+                <span class="job-tag">全职</span>
+                <span class="job-tag">10k‑18k</span>
+                <div class="job-desc">
+                    负责业务接口开发，数据库维护，熟悉Java/Python优先。
+                </div>
+                <a href="#apply" class="btn-apply">立即投递</a>
+            </div>
+            <div class="job-card">
+                <h3>UI设计师</h3>
+                <span class="job-tag">全职</span>
+                <span class="job-tag">7k‑13k</span>
+                <div class="job-desc">
+                    负责产品界面设计，输出原型与设计稿，会Figma。
+                </div>
+                <a href="#apply" class="btn-apply">立即投递</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 公司介绍 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">关于我们</h2>
+            <div class="about-content">
+                <p>我们是一家快速成长的企业，注重人才培养，提供五险一金、节日福利、绩效奖金、带薪年假、定期团建。<br>
+                开放包容的团队氛围，鼓励创新，与员工共同成长。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 投递表单 -->
+    <section id="apply" class="container">
+        <h2 class="section-title">在线投递简历</h2>
+        <div class="form-box">
+            <form>
+                <div class="form-item">
+                    <label>姓名</label>
+                    <input type="text" placeholder="请输入你的姓名">
+                </div>
+                <div class="form-item">
+                    <label>联系电话</label>
+                    <input type="tel" placeholder="请输入手机号">
+                </div>
+                <div class="form-item">
+                    <label>应聘岗位</label>
+                    <input type="text" placeholder="例如：前端开发工程师">
+                </div>
+                <div class="form-item">
+                    <label>个人简介</label>
+                    <textarea placeholder="简单介绍你的工作经历、技能"></textarea>
+                </div>
+                <div class="form-item">
+                    <button type="submit">提交简历</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 XX公司招聘 版权所有</p>
+    </footer>
+</body>
+</html>
